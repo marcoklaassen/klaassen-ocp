@@ -1,0 +1,31 @@
+cluster_name: ocp4
+public_domain: <domain>
+letsencrypt_account_email: <mail>
+dns_provider: hetzner
+hetzner_account_api_token: <api-token>
+hetzner_zone: <hetzner-zone>
+
+# Created with: htpasswd -nb admin <your password>
+auth_htpasswd:
+  - admin:<passwd>
+  - local:<passwd>
+
+cluster_role_bindings:
+  - cluster_role: sudoer
+    name: login@redhat.com
+  - cluster_role: cluster-admin
+    name: admin
+
+# Single node cluster
+master_count: 1
+compute_count: 0
+masters_schedulable: true
+master_memory_size: 65536
+master_memory_unit: 'MiB'
+master_vcpu: 12
+master_root_disk_size: '120G'
+master_special_cpu: "<cpu mode='host-passthrough'></cpu>"
+
+storage_nfs: true
+
+image_pull_secret: <your image pull secret>
