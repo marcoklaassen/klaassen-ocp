@@ -28,4 +28,14 @@ master_special_cpu: "<cpu mode='host-passthrough'></cpu>"
 
 storage_nfs: true
 
+# reference to OpenShift version
+openshift_version: 4.10.11
+# client versions, oc and openshift-install
+openshift_location: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.10"
+
+# reference to coreos qcow file
+coreos_version: 4.10.3
+coreos_download_url: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.10/4.10.3/rhcos-4.10.3-x86_64-qemu.x86_64.qcow2.gz"
+coreos_checksum: "66f6333c94ce444b619f9a413ff7b00925a51c6ecbdbadf730622861ce36f95e"
+
 image_pull_secret: <your image pull secret>
