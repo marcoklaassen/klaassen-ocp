@@ -14,4 +14,4 @@ spec:
     - group: user.openshift.io
       kind: User
       jsonPointers:
-        - /spec/groups
+        - /groups
