@@ -4,7 +4,8 @@ This repo contains cluster specific config files for my ocp installation relatin
 
 ## Structure
 
-* `config/` contains default resources for initial cluster setup
+* `initial-config/` contains default resources for initial cluster setup
+* `gitops/` stuff to deploy after initial cluster setup
 * `server.config` basic host configuration
 * `cluster-example.yaml` basic cluster config without any information which should be protected
 
@@ -41,14 +42,14 @@ decrypt ocp.yaml
 sops --decrypt ocp.yaml
 ```
 
-encrypt config/github-secret.yaml
+encrypt initial-config/github-secret.yaml
 ```
-sops --encrypt --in-place --encrypted-regex 'data' --pgp <your-pub> config/github-secret.yaml
+sops --encrypt --in-place --encrypted-regex 'data' --pgp <your-pub> initial-config/github-secret.yaml
 ```
 
-decrypt config/github-secret.yaml
+decrypt initial-config/github-secret.yaml
 ```
-sops --decrypt config/github-secret.yaml
+sops --decrypt initial-config/github-secret.yaml
 ```
 
 ## How to find install logs
