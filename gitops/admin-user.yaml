@@ -3,3 +3,4 @@ apiVersion: user.openshift.io/v1
 metadata:
   name: marcoklaassen
 fullName: Marco Klaassen
+groups: []
