@@ -10,3 +10,7 @@ spec:
     repoURL: 'https://github.com/marcoklaassen/klaassen-ocp'
     path: gitops
   project: default
+  ignoreDifferences:
+    - group: user.openshift.io
+      jsonPointers:
+        - /spec/groups
