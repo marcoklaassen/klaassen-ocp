@@ -12,5 +12,6 @@ spec:
   project: default
   ignoreDifferences:
     - group: user.openshift.io
+      kind: User
       jsonPointers:
         - /spec/groups
