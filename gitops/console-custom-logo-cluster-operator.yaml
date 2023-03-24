@@ -7,4 +7,4 @@ spec:
     customLogoFile:
       key: console-custom-logo.png
       name: console-custom-logo
-    customProductName: Klaassen Demo OCP
+    customProductName: Klaassen.click Demo Cluster
