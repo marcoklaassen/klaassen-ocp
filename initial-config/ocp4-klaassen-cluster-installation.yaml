@@ -15,7 +15,3 @@ spec:
       kind: User
       jsonPointers:
         - /groups
-    - group: ""
-      kind: ConfigMap
-      name: custom-logo
-      namespace: openshift-console
