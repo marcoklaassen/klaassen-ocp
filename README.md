@@ -47,3 +47,24 @@ sops --decrypt initial-config/github-secret.yaml
 ## How to find install logs
 
 If you like to follow the installation run 'tail -f  /root/hetzner-ocp4/ansible/../ocp4/.openshift_install.log' in a second terminal. For more details, connect to the bootstrap node: ssh -l core <ip-address>.
+
+## Dev Spaces configuration
+
+```md
+devspaces
+├── angular-udi.Containerfile
+└── github-secret.yaml
+```
+Containerfile to build Universal Developer Image plus Angular CLI and the github secret to configure OAuth between DevSpaces and Github
+
+### De- & Encrypt github secret
+
+encrypt github-secret.yaml
+```
+sops --encrypt --in-place --encrypted-regex 'stringData' --pgp <your-pub> devspaces/github-secret.yaml
+```
+
+decrypt github-secret.yaml
+```
+sops --decrypt devspaces/github-secret.yaml
+```
