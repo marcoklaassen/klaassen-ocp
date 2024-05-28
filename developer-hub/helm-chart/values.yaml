@@ -3,9 +3,13 @@ global:
     backend:
       enabled: true
   clusterRouterBase: apps.ocp4.klaassen.click
+  host: developer-hub-developer-hub.apps.ocp4.klaassen.click
   dynamic:
     includes:
       - dynamic-plugins.default.yaml
+    plugins:
+      - package: "@backstage-community/plugin-github-actions"
+        integrity: "sha512-rgtsw+SzFPwJLNVra4VDEsXtjq1RJeoyGty1zirDHhjbs+tLVb6sJC5e/gRPkh3VK/elSeFw1CJbDJXhaOJ7cA=="
 route:
   enabled: true
   host: '{{ .Values.global.host }}'
@@ -18,8 +22,17 @@ route:
 upstream:
   backstage:
     appConfig:
+      signInPage: github
       app:
+        title: Marco - Developer Hub Demo
         baseUrl: 'https://{{- include "janus-idp.hostname" . }}'
+      auth:
+        environment: production
+        providers:
+          github:
+            production:
+              clientId: '${GITHUB_CLIENT_ID}'
+              clientSecret: '${GITHUB_CLIENT_SECRET}'
       backend:
         auth:
           keys:
@@ -30,7 +43,7 @@ upstream:
         database:
           connection:
             password: '${POSTGRESQL_ADMIN_PASSWORD}'
-            user: postgres
+            user: postgres      
     args:
       - '--config'
       - dynamic-plugins-root/app-config.dynamic-plugins.yaml
@@ -47,6 +60,16 @@ upstream:
           secretKeyRef:
             key: postgres-password
             name: '{{- include "janus-idp.postgresql.secretName" . }}'
+      - name: GITHUB_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            key: client-id
+            name: 'github-auth-provider'
+      - name: GITHUB_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: client-secret
+            name: 'github-auth-provider'
     extraVolumeMounts:
       - mountPath: /opt/app-root/src/dynamic-plugins-root
         name: dynamic-plugins-root
