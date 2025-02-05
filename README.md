@@ -9,14 +9,6 @@ This repo contains cluster specific config files for my ocp installation relatin
 * `server.config` basic host configuration
 * `cluster-example.yaml` basic cluster config without any information which should be protected
 
-## Workaround Hetzner image naming
-
-`mv CentOS-91-el-x86_64-minimal.tar.xz CentOS-91-amd64-minimal.tar.xz`
-
-## RHEL Subscription Handling
-
-Use `subscription-manager register --consumerid=<your-id>` to register the RHEL System. You can find your UID on [the Systems overview on access.redhat.com](https://access.redhat.com/management/systems).
-
 ## SOPS Secret Handling
 
 List Your Keys
