@@ -3,13 +3,7 @@ kind: OAuth
 metadata:
   name: cluster
 spec:
-  identityProviders:
-    - htpasswd:
-        fileData:
-          name: htpasswd
-      mappingMethod: claim
-      name: Local
-      type: HTPasswd
+  identityProviders:    
     - name: github
       mappingMethod: claim
       type: GitHub
