@@ -4,3 +4,10 @@ metadata:
   name: marcoklaassen
 fullName: Marco Klaassen
 groups: []
+---
+kind: User
+apiVersion: user.openshift.io/v1
+metadata:
+  name: tmichelis-rh
+fullName: Tobias Michelis
+groups: []
