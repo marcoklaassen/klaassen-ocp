@@ -1,14 +1,14 @@
 cluster_name: ocp4
-public_domain: ENC[AES256_GCM,data:g9bHuMDmX9Em3jhvPNM=,iv:dQYGqAPT+PsJ732VyP+V43cKyY1nnsGrlyhKvxzvKoE=,tag:IqOGFOygC0yjYIWHJf5vTQ==,type:str]
-letsencrypt_account_email: ENC[AES256_GCM,data:+YyF2KEhruA/IGxYSv0PwgzpkusHH2NnDiG5ImM=,iv:hOlg+RJtYI8KlOUrj5Owghtie/GuBF7VW+t5e49WSH4=,tag:L+8Ni799PF+hsqfVrbX1LQ==,type:str]
+public_domain: ENC[AES256_GCM,data:fhRXfKcM2rC6YWtSWWM=,iv:gv4m4YaYvm7xk2fiBb2HwuGegKg8xh08pgICr/p7xIo=,tag:NTNfXmhjCLsnIxiI8D0Cig==,type:str]
+letsencrypt_account_email: ENC[AES256_GCM,data:K7rc9Mn0wM6/+oVhviCqgPFhfheTOrYbQbxh928=,iv:cM5tFpZO8NkifhqyH3t+n7k6Ehz5jNp0SfuTAGtcLcI=,tag:OLh0fm4viawGy1MJH8oy5w==,type:str]
 dns_provider: hetzner
-hetzner_account_api_token: ENC[AES256_GCM,data:C8ohmR1t5FfDsbFXAvlXP8SkHUeElK9mPOWtm+fBPpk=,iv:Lt2eibDbqGvO8LC9w1Kfj0j5Z7I/hIt+N/QLhE59pyg=,tag:H5nmQSH6g4LViwYR3vX4cA==,type:str]
-hetzner_zone: ENC[AES256_GCM,data:nd4quvqtqEGYPtuabnk=,iv:8dZrqa+GhnderJ5Q9aiIjsw1/dBrOIH+eHALIc3XK9U=,tag:W7kujrYsrwSzXsABgf25Pw==,type:str]
+hetzner_account_api_token: ENC[AES256_GCM,data:lqB+Gv71fFtgRXLDoORdOM5WY1HHYyO5Fq3lhs6SiYc=,iv:EJV2PFqXgIukSau4sH+ZAX8Eqne134crm4p6eJ+j9W4=,tag:PEmvWHy43EuGoTbtyDx2HQ==,type:str]
+hetzner_zone: ENC[AES256_GCM,data:0cj2OimTrmoclPQbD8c=,iv:2qaoKfAR0ZrIJzl9ROboyNSI4Yepa3/dwqvnZ9+IZz8=,tag:KDAS1Pr8++cYRT8vlc61cg==,type:str]
 # Created with: htpasswd -nb admin jGe5yD#ZsQDai6z9ayDUpttMj2^g
 # Example password is jGe5yD#ZsQDai6z9ayDUpttMj2^g
 auth_htpasswd:
-    - ENC[AES256_GCM,data:DdZTzkpo/9j6wuU9Z24IVNKd/92kgMalhTAIQtYhgS3pzX0H1Hk6CU6C9g==,iv:NhDQg2V6DZiPhMlTehuyc8+Kd2hv5Bkrjd85iIq1gro=,tag:QgBW5EZ8IFqmNDdgKjvpfw==,type:str]
-    - ENC[AES256_GCM,data:um7W7hqiKLkzfN+ATsrgvGCRh7/q1vA19bUR5V4Nn1LMbS6GdfjHetxCEQ==,iv:KWrrItXAIJkic/PaM7kiVl0+RKxLxWlSZVxsYV81sww=,tag:TONDoWcdQQkVEisuVCNMng==,type:str]
+    - ENC[AES256_GCM,data:U+ezDB8lkTLAh2FtIlpE9meX1pCUTxgrTpDi/RSBY2jssgOn4jvJEAgm4w==,iv:4QDcJWbq1JE8ru6q53HqELJQlRWySkwAH3YlIjfm8FE=,tag:ONtvzZbA9F8+xoeVT2WENA==,type:str]
+    - ENC[AES256_GCM,data:UFn/8G9pu2y3z6Gz8Mv5a51Jv3sCTAOcTuHCsvWSsGPlgjkCzguaDSuXPA==,iv:9wMSpLzEduXRmr2xXA4qsA2L/RNGiYdAH9KB6ho85Hc=,tag:9qt7sZRnbBz9N20tfvN8AA==,type:str]
 cluster_role_bindings:
     - cluster_role: sudoer
       name: login@redhat.com
@@ -25,42 +25,42 @@ master_special_cpu: <cpu mode='host-passthrough'></cpu>
 vm_autostart: true
 storage_nfs: true
 # reference to OpenShift version
-openshift_version: 4.19.9
+openshift_version: 4.19.14
 # client versions, oc and openshift-install
 openshift_location: https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.19
 # reference to coreos qcow file
-coreos_version: 4.19.0
-coreos_download_url: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.19/4.19.0/rhcos-4.19.0-x86_64-qemu.x86_64.qcow2.gz
-coreos_checksum: 60ba3dea0a1c9d7e67a815562cceffeb2eb492d8721958c6c3b527a3af8ca805
-image_pull_secret: ENC[AES256_GCM,data:FmALi/24Igs9x7MkrW8KGotrQSDY4GtcYSObqUrgBVjXdcL4AX7afbPpuiP3XIe17EqeNuim2f/lNwI6PnWgAoVoCoygZPk4tKl69nh4ION/yq5jj632lK40P7If5Rs1esPHLSnoVTFOBRi6vsYdOQisdnY071P5a/QEImq1nzyGr9MSm5gNwoLMDVh/9FIAMw+S6qTi2wfb6GTn1IcYn5Seb4MgIUcrgrLtKvMd/l04JU/FVrkIJC8cmtlxRDaduoxhOekDArt/63h5CIisndLs5VEqhsjeE4pPWdk6HSn2i6WasfSX7dnCzpwbiIV8hVkqzI5xGeQ7oURRs7xBhwPcjSDPPQPCdeDHGIYKRHO6yS1KqhgTcxCwqtyNkybE5bIW+I9kXDEjJPlhMQOY1VUmRkCeimiX7cxNgC8IPh3JoqI1IqMead54v6/gJMdAVQnxfuqZsRru7k5PnVOyENH+XWAaHO5/qdHUsUuoGLD3FaVIQNsVZyIlVjJUqD7Tpodnz/SO3Lv4/QoA6ZBY9a2XVlCmHbCdeQsUpy/w16cobTNqZTcRWcayJh6PuSv/384SqcWOCTjxO7ui3q7h1l5Qa1Ch1Im3jyBGDRlp7zXUYkDOVxv0ezGE1y0CM8wALCBm9ySqLg0F4MxoylO8AA9GYLUggvIbIZMIQZlgovH/+KVJTfsZVdI2EACAq9KBhq0/vW3Y4AzXN0zUB6t+FWB2jh5FtLfyk/GCh4nP6n8rKOhukhAPWAHdS6bUhQb7hkW6atJ2I8oOwbHoHCqL3bFA3nqg/50AaLyUnGTBetGq4nVXLjcsM2pkf6mcoLFZJZzZjjQvcbBEzcS1DW9n5C3H1oKZ3AlFsHub1tZhnsh9uO0T36OCd7DIe1ocezGbqGQL5+57NVctbw5/tcqvjczXVHNhpyVj+hADwn85bq9I+aKAyqvuLdUXG3uib1oA03ulSnTan9SnPpSNkjdZYU3E71Kc5nshH5jjwQzRAHF7rmr8/oO5UC2NYkJaphc8uIq7TRAKO3pSWDhAq5zHPL4fDMLCkfBxPM4kAI8semtzZkG+ViVmuu85aO3hXyawcQNN0X5Ipbf8jc8/GzW5t8XXzzYgQsi4axfkUbwJPH5q0TbOfC0ePCU+L98YF2gERqln+Z3PRO2LFsy8Vzt/9oDMSQuIAqnFfWbYPpkrfOdigGytGbUf6ZugkJBNPzOs92byXU1kWmryltkIJWBtSxcRm7NRrewHSA4qCVRLm0jQuTCCXzKboarnpsdVuU+CNGwr/in2/ngFJ5JZ1x72J/u7vSVUvss5G36fSguKgIYEiFdVyNv13CsY5/StZM8qIO2YKEJXPY+2YtZX/RG8gT2cpdVvMnLMdfVR4XeV2LLk+eGXxqzQpABTOBdR6TfrPyejVrWCaeV0JU0bGij2QPvlFHNEJDa5IVUSXNsJVBsMCEjo8DIMJ96ia7pxzQM9dv3sM2R9mNgCIKdlwnhRki3o7JefPwTK8A2F1XpZUBV1fZn7vnK2caScBgGI543Q2/wOIdo0uuWCix0bzfVDJA/0QwTZj4JFYDpiaxIfoUl/id5QRnrPT+hrFMu6vWD4zWs7uW4S7574GpHuwFe+08QQWmnHSksUf0VjiJAtpLTkoNfYJedHI5HVY4+6BsotW7RzKYofp7DFc4JzAG2oJbRAEHusU4Tj306E9DPClNOjEbz9+tDuNxsCMcVgxAZGoKSea5vXDGZtsZR3fVI8Vh2XwHiOc8NC5o4b+Zf8Hj1Zk5EgO1jzIjyMEBBCv1P/uIw8/kwmOkT3NokKothd5+vbcMMbXQEMM9bYferBdyRsvR4B74MojWBx06dGgVBPmWNJzxvIUcEoE3kKJ/V7xofKP9oGg/ArqUygs1+7BQO5nhNyXi8SnUMYzsqtHlU+GP3MSmWytEAVNm6/n84eai2HMBxG3mLxQwZBsxZn+88dHQjYOmqztGWya65mktvQEzaZlmZOW8KG7jjyPJBu74N7I0BsLMfQhyY50wN3CUQO/atLjDciNjbMW2KqT0x1XHBM2RPs1ayw6zpUx3v7gEibACX+Jyf7cZqqEw+e5tWZ4hyJgsfdRHVyqPDa1sDmS80jKpMwmEPBWVzEfo2wbIF31C8qPPwhRVgqWJaaPg5uH8JmxExog4SC0bRmjKG5e6DNVI8HlHGChjC1fYUIo2T+l6ZJ+DM8SagL3WOINoB0Cg103fdSMvG1hbwU6D2G9T5tYywXRkN1xoOzJT9mLt5FwMHHNQIohDj4O09hLeeVgtNq9ces6dhdVoTDrJyz4AnJYI3/k8AdM0LqxRgNbD8OeRcrjty0/FWeJGLQMX69UdAMuslguUBINBvaqzQ45QuEX7Bwp+Kf57xkfp9dYF1dFVnNmfp6PAOvI47+WD1xDjRj6JNVEczlRnfL7PsarqBqS4X0sCnEkHnpcSnBR4Mby92aZIAVD0L2H45JWISVDUkiIHgKj1vV6GyQyhmNDjih3vq92gtFBVlgo9CXrK5cTfF7qg6gbt6AlnchrPtqX1qLGbmkXwGwdzXHjKnltIR3rh5tgh6GGjm/pxtcZsCCw4WwU65IJtN0Q0FUreZJ5m6fLGg8LOm79sxUzCokklnSxWl7Kd4PrtsK9RHVHa8cb4pYWcJbv5n++AIHvJ79XL2+kyiWnDHFf4ys94KI4tptB7czM5OUYk23I3vvC+DvEGHj8zAbH9g5+QZH2SgxFM08G8L7X943kFCML09+/PITk/xUPw04xw2edGiFItnfxqz9ht0H+MooB9iC1O5Onl79Xla1w18GgNFEWbznJcp0A/hWjTdZjbGkmhVSJ0u3AVjxRDnm0K0jpIPcarTnsUKFEQK08bWpUDFlOzCPDZJ7W2GzERg2yxOzGwfKmieQ5CgbkZ18gYPWOVdtyeG3W4+UA3zvFjk5LnZ1YYFANuOCx7XI6TGmyenXdQu+Enohi6x7N8Jgj+ICPlz98FZLoCGY4/ywckdwDFLNZ5M3DfvGwzMtpmp+pld1n8rig3wIJ0fw9Z3cRBUSG7XVz42N8jJt6yxf+jimYR1HR74fyqc1VHte6R+/JZrp8xXW5KLIQ24kQntgs85vThD7d3FN0NMhgL+BPUfjaJLEEFWr3N6tC5kCuuCqCzK9gQt/YB/qX8NRFiMVxQDeI3HdL1rj125ieGmZWnLE39+MePLaItEpdAppg3t0Q0BX/9NmmhMwgSmhA/MxRSOPI3USBamaPQs0EL/TZ2qXUbMyMzKcTIL03Yeg77ReSr7Jjuq910gI/5DSU/h7KXsyY2HlUTmRWr3i8GTGaLehvVndSiOQVGxKzo9cmutRC6MX1jwOmc2nMPOzy9hTtmZMT1gKcvnh1d/yu57q844cAEDWKWHfmQdnvn7crYHOZ70/tk7JiBci7wSmYfSTWpRail441/PnqUEWrDBG8oOo+SgKFwGWqG14/AoTUXGVR6jaVJRbNxLATXGNl2h8q4PDPloaMwuIQcjzyARnCEOlRTKtZueb0fs3v/PLuR3A5lBg6X3n/v7c/IsG+CC6nUo83xxMrZh7+cYadTl7FZL+mdZ8udUzAcJB7RFdHtgECqfHqYXNq2g7AJUPu8rranL4QGFc52WCeFJG5pR2njHsZbFks66JhEt7I49iLV7m93nZXZDhDB6eLjLZaz9rw58iycMbeEDeZBklfeo=,iv:E1ifTNTxsHPukRjNZfAi9b/NZA7of4hGFIb9+ty7dDw=,tag:KZ/1UWUmoxfBrNiidwb6uA==,type:str]
+coreos_version: 4.19.10
+coreos_download_url: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.19/4.19.10/rhcos-4.19.10-x86_64-qemu.x86_64.qcow2.gz
+coreos_checksum: 3e093d26fb167d3bb43544dae9678d3ce0121b649868207239e2bb07d6127632
+image_pull_secret: ENC[AES256_GCM,data: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,iv:DBYhqN2fppS5NpagJlUvquw+1l0SWQu47eBwyn+k0vo=,tag:JghZ8VVxdL2F/tO+bXdZjA==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2025-09-02T09:33:12Z"
-    mac: ENC[AES256_GCM,data:XsjMsrQmMkZPBOX5zkEeCyGLXzVb4b8cmh2BClIHOJPuRjBn6USynfWepIEjK1n3LrhJ0nQ1FJuTdth/OjekgSFtg2sGSkldAAyvbVr5DPe+orIVv9yHuDY7Ek5Nw3TAWHAK94Fms3Q6b0R62tkKxIwb35JTPHZPg7hc6psfH74=,iv:1y4tDqd/Kv/j19+mvejIO29mkZn9P8HelzWwQ8wV3PI=,tag:jVAvD+tX/mMiPLU0yQLTjQ==,type:str]
+    lastmodified: "2025-10-14T08:49:48Z"
+    mac: ENC[AES256_GCM,data:RXc5SYbsHBh1pvio+WVErDJ3TOorRFx/0dOhaGC5VJ5phRB9aVi/hUZV2JWE32gnhZp3RMb0d5AeS4xPbEbQxf+lHwvarTiIjK1z/SXNyZ2hQUUifzGcJLi/46B4oi6+JegUwLK3oAXd1UoSUgRVwtJf2bQf/9Lv088Jf2W+pTQ=,iv:rPgbr5a9IzdKV182g1IEcVpOxHixkgRCPAzN8pB5dpA=,tag:U29C1PN3uP/p1nDaETnl4w==,type:str]
     pgp:
-        - created_at: "2025-09-02T09:33:12Z"
+        - created_at: "2025-10-14T08:49:48Z"
           enc: |-
             -----BEGIN PGP MESSAGE-----
 
-            hQIMA1FH4nk+hvMsAQ//WHGDs0eRV4Ua51/ieq3X6r5EBYcA3xgM+hRnouIHNwEe
-            Ff90KylmGnWY5Ndyqs0yOzNbmSAtPU4iyY6JazMTFZylx6iGbS/aIR3F2W2Y4T1v
-            nyxN1ipR2hUY/K1aMKPuUcdNwU05x6kbqPc2WutFe/r6bg8v+530xJJcermKTqQ3
-            NDHn8oVQre+lJRkdRdR+ntgH0MEHV7mk9UtarxSE/xNVkcgC+QDCIsXfUWl4WTSp
-            m0GA9PMtWqucbAwjHecHlSSJZcKFOsTla79CO7EObghH5CdI1T8mK5Xy9wtLhHMi
-            JtNy/nh+U45PZsk956hgefRRR8AZ4sAbC9bDm3i620VBHiA0G/gmpHqHk0Da0sx/
-            YFk1d6EUCBfsKLrWF3Y67ptEUlvZw57WrKkAOlHRRZf6Q79M1MNLS9zB3ZYvhtmd
-            b8RMicGzHypETYg6ySPeaeL3bnQ2gaRymeut8C6lm8n6ajmjnTaA4w8fIj28qpY8
-            hXHO6JnT2rpft1+3LhdLAnL4Mr4tejCgifk1xOtPPwqkL0xI4TQk/VrKjxgJw+bC
-            sXcOG7aHC/3U++Q7IgNxKCnvp0U1X7Zw4ii4TiFNtB9xiR0f/e/n7Ua+p1DxPYB5
-            0auhbvyDe5rCU0chtRpVVDvRGdz6yPffq30sBi100U7I43nr0qHoMadY6fTDQTnU
-            aAEJAhAI389owSRoCVD73kXab9EWJg99k6XKQ7pvbiAqU+d+zQQrAE9n/QenNEeo
-            32LpcgKSqaBSDU29tyCFanAeLmSASN2C10+A/b8SYwdQY41dXDM81US2DcplnS1a
-            CXkoL60Bip52
-            =vcpA
+            hQIMA1FH4nk+hvMsAQ//e1PmYGQZkcXAHe62aDWJzAPRqqckr0aYKg2HhxgNKP8T
+            17tIcvpEmN7hNIn3eoqjzZXkwepmzCiqf+Ra7AR1ULyUabccjs+CPcdReibserVb
+            HQN0LmXVmpx3PMAlftBDCvseFGjaUsTVFDOIh3UPX1nWlOIBA0GDwczkNNvIjzVl
+            0BiSLvT4vT7WN9IH99Tq+O8gTcmBaKm0rPANOL+jee7LuWX23VFVb50WT/CCVcM0
+            20r1Sn45KbUrQmVv1zZfm2uKLlUAHnnC6KDbtsI9hELfjZBRxMNMYYP9M33PG9Ll
+            /gBjNhIxIbABSG9TBs8LRlSFwaQ0bI45PeOVdoZ3nnpWa2McqBnJBAkiMzgchov6
+            KQ+rIITbETTORmxxLEquSGsLThkr985cmy3yp/9/j1di7rGfLXnSxi4Iu0NIyvLR
+            Tg8RvZ9I+KilgQk58jL1hTv4wREWtpqpLCRHA92itxMD7+ZvzZqIuAwDC5IIEkRv
+            pVdZs4Ll5PLJ8dEvOiR3h7wBCwLUzRdwV1bezBrMRhhuY0z28KbnC6QxC442vWsV
+            urUOuxdUTR1DOAAWpV/DjQc1Q/pmMx1nIW51ZptQhUGZkOiLObxNUbS7kFyeREKn
+            DaARm/yrLWGgZHB4/m44koMsLJS597KfCmJz8QXtxkXcuI/aOsEa20n8FbTINHbU
+            ZgEJAhCsqSc9WuCrf24ZssrT40DMoia2+D84k4wLG3SXItszxK5iVvxNCeWoNsbM
+            Dm4slwqxhVFoTkWBojXa9opSZv9GMaU1WP6pK3gChMv8/2goc2K0o6s2BkSWxJMF
+            xqLoddnKsw==
+            =SCLg
             -----END PGP MESSAGE-----
           fp: 2993FF2065E46521576A5FFF34181E40C6544217
     encrypted_regex: public_domain|letsencrypt_account_email|hetzner_account_api_token|hetzner_zone|auth_htpasswd|image_pull_secret
