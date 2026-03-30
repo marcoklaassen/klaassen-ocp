@@ -18,7 +18,7 @@ gpg --list-keys
 
 encrypt ocp.yaml
 ```
-sops --encrypt --in-place --encrypted-regex 'public_domain|letsencrypt_account_email|hetzner_account_api_token|hetzner_zone|auth_htpasswd|image_pull_secret' --pgp <your-pub> ocp.yaml
+sops --encrypt --in-place --encrypted-regex 'public_domain|letsencrypt_account_email|hetzner_account_api_token|hetzner_cloud_api_token|hetzner_zone|auth_htpasswd|image_pull_secret' --pgp <your-pub> ocp.yaml
 ```
 
 decrypt ocp.yaml
