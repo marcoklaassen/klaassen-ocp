@@ -1,3 +1,4 @@
 *.private
 logo/
 .DS_Store
+*.htpasswd

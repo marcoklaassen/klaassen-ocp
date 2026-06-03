@@ -15,3 +15,9 @@ spec:
         organizations:
           - ocp4-marco
         teams: []
+    - name: devspaces      # The name users will see on the login screen
+      mappingMethod: claim
+      type: HTPasswd
+      htpasswd:
+        fileData:
+          name: htpasswd-secret   # Must match the Secret name

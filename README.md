@@ -36,6 +36,16 @@ decrypt initial-config/github-secret.yaml
 sops --decrypt initial-config/github-secret.yaml
 ```
 
+encrypt initial-config/htpasswd-secret.yaml
+```
+sops --encrypt --in-place --encrypted-regex 'data' --pgp <your-pub> initial-config/htpasswd-secret.yaml
+```
+
+decrypt initial-config/htpasswd-secret.yaml
+```
+sops --decrypt initial-config/htpasswd-secret.yaml
+```
+
 ## How to find install logs
 
 If you like to follow the installation run 'tail -f  /root/hetzner-ocp4/ansible/../ocp4/.openshift_install.log' in a second terminal. For more details, connect to the bootstrap node: ssh -l core <ip-address>.
